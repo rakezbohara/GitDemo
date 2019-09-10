@@ -8,6 +8,8 @@
 
     <LinearLayout
             style="@style/WidthMatchHeightWrapVertical">
+            <include layout="@layout/toolbar_home"/>
+
 
     </LinearLayout>
 </layout>
