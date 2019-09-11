@@ -11,12 +11,26 @@
                   style="@style/WidthMatchHeightWrapVertical"
                   tools:ignore="MissingPrefix">
 
-        <ImageView
-                style="@style/WidthWrapHeightWrap"
-                app:setImgResource="@{viewModel.githubUser.avatarUrl}"/>
+        <LinearLayout
+                style="@style/WidthMatchHeightWrapHorizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    app:setImgResource="@{viewModel.githubUser.avatarUrl}"/>
 
-        <TextView
-                style="@style/WidthWrapHeightWrap"
-                android:text="@{viewModel.githubUser.login}"/>
+            <TextView
+                    style="@style/WidthWrapHeightWrap"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="@{viewModel.githubUser.login}"/>
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/hint_color"/>
     </LinearLayout>
 </layout>

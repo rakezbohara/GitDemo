@@ -15,11 +15,9 @@
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 style="@style/WidthMatchHeightWrap"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 app:set_list="@{viewModel.userList}"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:layout_marginBottom="22dp"
                 android:visibility="@{viewModel.userList.size == 0 ? View.GONE : View.VISIBLE}"/>
 
 
