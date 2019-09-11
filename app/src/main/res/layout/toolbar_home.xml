@@ -7,7 +7,7 @@
             style="@style/WidthMatchHeightWrap"
             android:padding="16dp">
         <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/toolbarSearchLayout"
+                android:id="@+id/toolbarSearchEditText"
                 style="@style/WidthWrapHeightWrap"
                 android:layout_width="match_parent"
                 android:layout_centerVertical="true"

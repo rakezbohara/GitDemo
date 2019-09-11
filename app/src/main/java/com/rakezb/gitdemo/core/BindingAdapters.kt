@@ -30,12 +30,8 @@ object BindingAdapter {
     @JvmStatic
     @BindingAdapter("app:setImgResource")
     fun setImgResource(imageView: ImageView?, imageUrl: String?) {
-        //val imageUrl = bankDetail.iconurl
         if (imageUrl?.isNullOrEmpty() == true)
             return
-        /*PicassoTrustAll.getInstance(imageView?.context)
-            .load(imageUrl)
-            .into(imageView)*/
         val picasso = Picasso.Builder(imageView?.context)
             .listener { _, _, e ->
                 if (BuildConfig.DEBUG)

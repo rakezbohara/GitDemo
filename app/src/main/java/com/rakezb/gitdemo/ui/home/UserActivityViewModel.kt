@@ -21,6 +21,7 @@ class UserActivityViewModel(app: Application) : BaseViewModel(app) {
     }
 
     var userList: MutableLiveData<List<GithubUser?>?> = MutableLiveData()
+    var userListResponse: MutableLiveData<List<GithubUser?>?> = MutableLiveData()
 
     fun requestUserList() {
         compositeDisposable.add(apiRepository.getGithubUserList()
@@ -29,6 +30,9 @@ class UserActivityViewModel(app: Application) : BaseViewModel(app) {
             .doOnTerminate { onApiRequestFinish() }
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ response ->
+                //save fill list to response
+                userListResponse.postValue(response)
+                //set to list
                 userList.postValue(response)
             }, {
                 onApiRequestError(it)

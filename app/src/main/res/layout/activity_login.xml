@@ -10,7 +10,9 @@
 
     <LinearLayout
             style="@style/WidthMatchHeightWrapVertical">
-        <include layout="@layout/toolbar_home"/>
+        <include
+                android:id="@+id/toolbarLayout"
+                layout="@layout/toolbar_home"/>
 
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
