@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="java.lang.Double"/>
+        <variable
+                name="viewModel"
+                type="com.rakezb.gitdemo.ui.home.adapter.UserItemViewModel"/>
+    </data>
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                  style="@style/WidthMatchHeightWrapVertical"
+                  tools:ignore="MissingPrefix">
+
+        <ImageView
+                style="@style/WidthWrapHeightWrap"
+                app:setImgResource="@{viewModel.githubUser.avatarUrl}"/>
+
+        <TextView
+                style="@style/WidthWrapHeightWrap"
+                android:text="@{viewModel.githubUser.login}"/>
+    </LinearLayout>
+</layout>

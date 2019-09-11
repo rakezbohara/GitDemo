@@ -7,7 +7,7 @@ android {
     compileSdkVersion Versions.compileSdk
 
     defaultConfig {
-        applicationId "com.eightsquarei.eremitpay"
+        applicationId "com.rakezb.gitdemo"
 
         minSdkVersion Versions.minSdk
         targetSdkVersion Versions.targetSdk
@@ -28,11 +28,11 @@ android {
         }
         dev {
             ext.enableCrashlytics = false
-            buildConfigField "String", "SERVER_URL", '"https://sit.merchantrademoney.com/"'
+            buildConfigField "String", "SERVER_URL", '\"https://api.github.com/\"'
         }
         debug {
             ext.enableCrashlytics = false
-            buildConfigField "String", "SERVER_URL", '"https://demo.merchantrademoney.com/"'
+            buildConfigField "String", "SERVER_URL", '\"https://api.github.com/\"'
         }
     }
     sourceSets {

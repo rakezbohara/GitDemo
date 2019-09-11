@@ -11,4 +11,6 @@ constructor() {
     @Inject
     lateinit var api: ApiService
 
+    fun getGithubUserList() = api.requestUserList()
+
 }

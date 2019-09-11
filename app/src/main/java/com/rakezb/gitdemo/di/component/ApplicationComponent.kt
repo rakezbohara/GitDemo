@@ -6,7 +6,7 @@ import com.rakezb.gitdemo.MyApplication
 import com.rakezb.gitdemo.di.module.ApplicationModule
 
 import com.rakezb.gitdemo.di.module.NetModule
-import com.rakezb.gitdemo.ui.login.UserActivityViewModel
+import com.rakezb.gitdemo.ui.home.UserActivityViewModel
 
 import dagger.Component
 import javax.inject.Singleton

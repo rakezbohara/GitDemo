@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+        <import type="android.view.View"/>
         <variable
                 name="viewModel"
-                type="com.rakezb.gitdemo.ui.login.UserActivityViewModel"/>
+                type="com.rakezb.gitdemo.ui.home.UserActivityViewModel"/>
     </data>
 
     <LinearLayout
             style="@style/WidthMatchHeightWrapVertical">
-            <include layout="@layout/toolbar_home"/>
+        <include layout="@layout/toolbar_home"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                style="@style/WidthMatchHeightWrap"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:set_list="@{viewModel.userList}"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginBottom="22dp"
+                android:visibility="@{viewModel.userList.size == 0 ? View.GONE : View.VISIBLE}"/>
 
 
     </LinearLayout>
